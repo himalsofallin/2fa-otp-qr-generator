@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- vim: set nowrap ts=2 sw=2: -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+		<link rel="stylesheet" type="text/css" href="common.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="qrcode.css" media="screen" />
+    	<script type="text/javascript" src="lib/base32.js"></script>
+    	<script type="text/javascript" src="lib/qrcode.js"></script>
+	  	<script type="text/javascript" src="qr.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta charset="UTF-8" />
+  </head>
+  
+  <body>
+		<main>
+      <a id="urilink">
+        <div id="qrcode">
+          <img id="preview" src="img/logo.png" onError="onImageError()" />
+        </div>
+      </a>
+		</main>
+
+		<script type="text/javascript">
+      var qrcode = new QRCode(document.getElementById("qrcode"), {
+	      correctLevel : QRCode.CorrectLevel.H,
+	      text: window.location.href,
+	      colorLight : "#ffffff",
+	      colorDark : "#000000"
+      });
+
+	onValueChanged("H1Z1i0R0o0T0");
+
+	//delete all scripts
+	var scripts = document.getElementsByTagName('script');
+	for (var i = scripts.length; i--;) {
+		scripts[i].parentNode.removeChild(scripts[i]);
+	}
+
+		</script>
+  </body>
+</html>

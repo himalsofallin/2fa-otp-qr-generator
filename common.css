@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: rgb(17, 3, 78)
+}
+
+body {
+  font-family: Sans-Serif;
+  text-align: center;
+  max-width: 640px;
+  margin: auto;
+  width: 90vw;
+}
+
+body > * {
+  text-align: justify;
+  padding: 1em;
+}
+
+body > :not(:first-child) {
+  border-top: 1px solid black;
+}
+
+footer {
+  font-size: 0.9em;
+}
